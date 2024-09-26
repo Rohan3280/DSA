@@ -13,18 +13,27 @@ class Node{
 	}
 };
 
-void disp(Node* head)
-{
-	if(head==0)
-	{
-		return ;
-	}
-	
-	cout<<head->val<<endl;
-	disp(head->Next);
-	
-}
+//void disprec(Node* head)
+//{
+//	if(head==0)
+//	{
+//		return ;
+//	}
+//	
+//	cout<<head->val<<endl;
+//	disprec(head->Next);
+//	
+//}
 
+void disp(Node head)
+{
+	Node* temp= &head;
+	for(int i=0;temp!=0;i++)
+	{
+		cout<<temp->val<<endl;
+		temp=temp->Next;
+	}
+}
 int main()
 {
 	Node a(20);
